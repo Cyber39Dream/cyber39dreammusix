@@ -3,65 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cyber39Dream Music Hub</title>
+
+  <title>Cyber39Dream | Official Music Hub</title>
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#00ffb3">
+
+  <!-- SEO -->
+  <meta name="description" content="Official music hub for Cyber39Dream. Stream the latest releases and stay connected.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cyber39Dream | Official Music Hub">
+  <meta property="og:description" content="Official music hub for Cyber39Dream.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://link.c3d.gt.tc">
+
+  <!-- Twitter/X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cyber39Dream | Official Music Hub">
+  <meta name="twitter:description" content="Official music hub for Cyber39Dream.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="favicon.jpeg">
 
   <style>
     body{
       margin:0;
       font-family:Arial, sans-serif;
-      background:#0d0d0d;
+      background:url("https://i.ibb.co/ymWKDmtc/2b8dfe69-7013-4f1e-b36c-d7dde4b435a6.jpg") no-repeat center center fixed;
+      background-size:cover;
       color:white;
       text-align:center;
+      overflow-x:hidden;
+    }
+
+    /* dark overlay for readability */
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,0.6);
+      z-index:-1;
     }
 
     header{
-      padding:40px 20px;
-      background:linear-gradient(135deg,#111,#1f1f1f);
-      border-bottom:2px solid #222;
+      padding:50px 20px;
     }
 
     h1{
       font-size:3rem;
-      margin-bottom:10px;
+      margin:0;
     }
 
     p{
-      color:#bfbfbf;
+      color:#ccc;
     }
 
     .container{
       max-width:900px;
       margin:auto;
-      padding:30px 20px;
+      padding:20px;
     }
 
     .latest{
-      background:#151515;
-      border:1px solid #2a2a2a;
+      background:rgba(0,0,0,0.5);
+      border:1px solid rgba(255,255,255,0.1);
       border-radius:20px;
       padding:25px;
-      margin-bottom:40px;
-    }
-
-    .latest h2{
-      margin-top:0;
-      color:#00ffb3;
-    }
-
-    .btn{
-      display:inline-block;
-      margin-top:15px;
-      padding:12px 20px;
-      background:#00ffb3;
-      color:black;
-      text-decoration:none;
-      border-radius:12px;
-      font-weight:bold;
-      transition:0.2s;
-    }
-
-    .btn:hover{
-      transform:scale(1.05);
+      margin-bottom:30px;
+      backdrop-filter:blur(10px);
     }
 
     .songs{
@@ -71,24 +81,47 @@
     }
 
     .song-card{
-      background:#151515;
-      border:1px solid #2a2a2a;
+      background:rgba(0,0,0,0.5);
+      border:1px solid rgba(255,255,255,0.1);
       border-radius:20px;
       padding:20px;
+      backdrop-filter:blur(10px);
+      transition:0.2s;
     }
 
-    .song-card h3{
-      margin-top:0;
+    .song-card:hover{
+      transform:scale(1.02);
+    }
+
+    .song-card img{
+      width:100%;
+      border-radius:15px;
+      margin-bottom:10px;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:10px;
+      padding:10px 18px;
+      background:#00ffb3;
+      color:black;
+      text-decoration:none;
+      border-radius:10px;
+      font-weight:bold;
+    }
+
+    .btn:hover{
+      transform:scale(1.05);
     }
 
     footer{
-      margin-top:50px;
+      margin-top:40px;
       padding:20px;
-      color:#777;
-      border-top:1px solid #222;
+      color:#888;
     }
   </style>
 </head>
+
 <body>
 
   <header>
@@ -101,11 +134,7 @@
     <div class="latest">
       <h2>🔥 Latest Release</h2>
       <h3>Level Up</h3>
-      <p>Stream the newest release from Cyber39Dream.</p>
-
-      <a class="btn" href="/latest">
-        Listen Now
-      </a>
+      <a class="btn" href="/latest">Listen Now</a>
     </div>
 
     <h2>🎵 Songs</h2>
@@ -113,17 +142,12 @@
     <div class="songs">
 
       <div class="song-card">
+        <img src="https://i.ibb.co/HpLDX06Y/In-Shot-20260407-170943908-resized-jpg.png" alt="Level Up Cover">
+
         <h3>Level Up</h3>
         <p>Official release by Cyber39Dream.</p>
 
-        <a class="btn" href="/level-up">
-          Open
-        </a>
-      </div>
-
-      <div class="song-card">
-        <h3>More Coming Soon...</h3>
-        <p>New music is on the way.</p>
+        <a class="btn" href="/level-up">Open</a>
       </div>
 
     </div>
